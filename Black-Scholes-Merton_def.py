@@ -23,6 +23,7 @@ def bsm_vega(s0,K,T,r,sigma):
 def bsm_call_imp_vol(S0,K,T,r,C0,sigma_est,it=100):
     for i in range(it):
         sigma_est-=((bsm_call_value(S0,K,T,r,sigma_est)-C0)/bsm_vega(S0,K,T,r,sigma_est))
+        print("This is a test for git")
     return sigma_est
 
 S0=100
@@ -31,4 +32,3 @@ T=1.0
 r=0.05
 sigma=0.2
 bsm_call_value(S0,K,T,r,sigma)
-print(bsm_call_value(S0,K,T,r,sigma))
